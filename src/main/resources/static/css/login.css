@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    position: relative;
+    min-height: 100%;
+    background: linear-gradient(to bottom, #435B6A, #1F435A, #455F63);
+    transition: background-position 2s;
+}
+
+.card{
+    background-color: white;
+    box-shadow: 0 0 13px gainsboro;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 300px;
+}
+
+.title{
+    height: 50px;
+    text-align: center;
+    margin-top: 1.7em;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.row{
+    margin: 0;
+    padding: 0;
+    height: 55px;
+}
+
+.username{
+    width: 300px;
+    height: 35px;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    margin: .2em auto;
+}
+
+.password{
+    width: 300px;
+    height: 35px;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    margin: .2em auto;
+}
+
+.btn{
+    width: 80px;
+    margin: auto auto;
+    height: 45px;
+    display: block;
+}
+
+.btn-success{
+    margin-right: 15px;
+}
+
+.btn-primary{
+    margin-left: 15px;
+}
+
+input{
+    margin: 0;
+    padding: 10px;
+}

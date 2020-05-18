@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="default" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+    <link type="text/css" href="/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <table class="table" id="goods-table">
+            <thead>
+            <tr>
+                <th>Good Info</th>
+                <th>Good SpecificationsInfo</th>
+                <th>Good Price</th>
+                <th>Good Num</th>
+                <th>Good Image</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="good: ${goods}">
+                <td>
+                    <a th:text="${good.goodInfo}" th:href="@{'/good/show/' + ${good.goodId}}"></a>
+                </td>
+                <td th:text="${good.specificationInfo}"></td>
+                <td th:text="${good.price}"></td>
+                <td th:text="${good.num}"></td>
+                <td><img th:src="@{'/good/getGoodImage/' + ${good.goodId}}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

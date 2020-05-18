@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="default">
+<head>
+    <meta charset="UTF-8">
+    <title>添加商品</title>
+    <link type="text/css" href="../css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="../css/create.css" rel="stylesheet">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container" layout:fragment="content">
+    <div>
+        <form th:action="@{/good/save}" enctype="multipart/form-data" method="post">
+            <div class="row">
+                <h2>添加商品</h2>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="goodInfo">商品信息:</label>
+                    <input type="text" class="form-control" name="goodInfo" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="specificationInfo">规格信息</label>
+                    <textarea class="form-control" name="specificationInfo" cols="50" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="price">商品价格</label>
+                    <input type="number" class="form-control" name="price" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <label for="num">商品数量</label>
+                    <input type="number" class="form-control" name="num" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group">
+                    <div class="card">
+                        <div class="cardTitle">
+                            <p>上传图片</p>
+                        </div>
+                        <div class="originImg">
+                            <input type="file" class="upload" name="file">
+                            <div class="verticalLine"></div>
+                            <div class="horizontalLine"></div>
+                            <img class="preview" width="165" height="165">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <button type="submit" class="btn btn-success">
+                    保存
+                </button>
+            </div>
+        </form>
+    </div>
+
+
+</div>
+
+<script>
+    $('.upload').change(function () {
+        const filePath = $(this).val();
+        const fileFormat = filePath.substring(filePath.lastIndexOf('.')).toLowerCase();
+        const src = window.URL.createObjectURL($(this)[0].files[0]);
+        if(!fileFormat.match(/.png|.jpg|.jpeg/)) {
+            alert('上传错误,文件格式必须为：png/jpg/jpeg');
+            return;
+        }
+        $('.verticalLine').css('zIndex','-1');
+        $('.horizontalLine').css('zIndex','-1');
+        let img = new Image(); img.src = src;
+        if(img.width > 165) img.width = 165;
+        if(img.height > 165) img.height = 165;
+        let url = img.src;
+        $('.preview').attr('src',url);
+        $('.preview').css('width','100%');
+    });
+</script>
+</body>
+</html>

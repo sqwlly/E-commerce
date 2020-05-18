@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link type="text/css" href="/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="/css/login.css" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form th:action="@{/user/auth}" method="post">
+    <div class="card">
+        <div class="title">
+            系统登录
+        </div>
+        <div class="row">
+            <input type="text" class="username" name="userName" placeholder="账号">
+        </div>
+        <div class="row">
+            <input type="password" class="password" name="passWord" placeholder="密码">
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-success">
+                登录
+            </button>
+            <button type="button" class="btn btn-primary">
+                <a href="/user/register" style="color: white; text-decoration: none">注册</a>
+            </button>
+        </div>
+    </div>
+</form>
+
+</body>
+</html>

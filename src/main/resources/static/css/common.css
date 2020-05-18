@@ -1,0 +1,28 @@
+.card{
+    width: 400px;
+    height: 400px;
+    margin: 20px auto;
+    background-color: white;
+    box-shadow: 0 0 8px gainsboro;
+}
+
+.card button{
+    width: 130px;
+    margin: auto;
+}
+
+.cardTitle{
+    border-bottom: solid 1px gainsboro;
+    height: 40px;
+    width: 100%;
+    padding: 5px 20px;
+}
+
+.cardTitle p{
+    font-family: "SansSerif";
+    font-size: 13px;
+    text-align: center;
+    display: block;
+    color: blue;
+    margin: 5px 50px;
+}

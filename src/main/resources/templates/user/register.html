@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <link type="text/css" href="/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="/css/register.css" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form th:action="@{/user/registerPost}" method="post">
+    <div class="container">
+        <div class="card">
+            <div class="title">
+                <p>用户注册</p>
+            </div>
+            <div class="row">
+                <input type="text" name="userName" placeholder="用户名">
+            </div>
+            <div class="row">
+                <input type="password" name="passWord" placeholder="密码">
+            </div>
+            <div class="row">
+                <input type="text" name="name" placeholder="姓名">
+            </div>
+            <div class="row">
+                <div class="col-md-6" style="line-height: 15px; display: flex; padding-left: 125px; margin: 0 auto">
+                    <p class="text-center" style="height: 30px;">男</p><input type="radio" value="男" name="gender">
+                </div>
+                <div class="col-md-6" style="line-height: 15px; display: flex; padding-right: 125px; margin: 0 auto">
+                    <p class="text-center" style="height: 30px;">女</p><input type="radio" value="女" name="gender">
+                </div>
+            </div>
+            <div class="row">
+                <input type="text" name="age" placeholder="年龄">
+            </div>
+            <div class="row">
+                <input type="text" name="school" placeholder="所在学校">
+            </div>
+            <div class="row">
+                <button class="btn btn-primary">
+                    注册
+                </button>
+            </div>
+        </div>
+
+    </div>
+</form>
+
+</body>
+</html>

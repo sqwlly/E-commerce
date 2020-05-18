@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Popins', sans-serif;
+}
+
+.container{
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    grid-gap: 25px;
+    margin: 50px auto;
+}
+
+.container .card1{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.container .card1:hover{
+    box-shadow: 0 30px 50px rgba(0,0,0,.2);
+}
+
+.container .card1 .face{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card1 .face.face1{
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background: #fff;
+    color: #013d4a;
+}
+
+.container .card1 .face.face1 h2{
+    margin-top: 70px;
+}
+
+.container .card1 .face.face1 a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #013d4a;
+    border: 2px solid #013d4a;
+}
+
+.container .card1 .face.face1 a:hover {
+    color: #fff;
+    background: #013d4a;
+}
+
+
+.container .card1 .face.face2 {
+    background: #455F63;
+    transition: 0.5s;
+}
+
+.container .card1:hover .face.face2{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    border: 2px solid #013d4a;
+}
+
+.container .card1 .face.face2 h2{
+    margin: 0;
+    padding: 0;
+    font-size: 10em;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.container .card1:hover .face.face2 h2 {
+    color: #013d4a;
+    font-size: 2em;
+}
+
+
+

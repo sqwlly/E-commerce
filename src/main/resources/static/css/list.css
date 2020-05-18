@@ -1,0 +1,107 @@
+html,body{
+    background-color: whitesmoke;
+}
+
+.container {
+    padding-top: 50px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Popins', sans-serif;
+}
+
+.container{
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    grid-gap: 25px;
+    margin: 50px auto;
+}
+
+.container .card1{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.card1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 350px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.card1 .detail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: green;
+    height: 50px;
+    margin: 15px auto;
+}
+
+.caption{
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    height: 160px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transition: all .5s;
+    background: gainsboro;
+    color: #666666;
+    opacity: 0.9;
+}
+
+.container .card1:hover{
+    top: -5px;
+    box-shadow: 0 30px 50px rgba(0,0,0,.2);
+}
+
+.container .card1:hover .caption{
+    bottom: 0px;
+    box-shadow: 0 -2px 3px #FFFFF6;
+}
+
+.card1 img{
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+footer{
+    height: 50px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #5a6268;
+}
+
+footer p{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
